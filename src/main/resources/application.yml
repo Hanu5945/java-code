@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:postgresql://43.201.132.91:5432/dev_db
+    username: puser1
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+        use_sql_comments: true # 실행 쿼리 노출
+
+server:
+  address: 0.0.0.0
+  port: 13799  # 여기에 원하는 포트 번호를 설정
+
+logging.level:
+  org.hibernate.SQL: debug
+#  org.hibernate.type: trace
